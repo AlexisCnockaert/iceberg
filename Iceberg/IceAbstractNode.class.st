@@ -69,6 +69,7 @@ IceAbstractNode >> collect: aBlockClosure [
 	"Collect the results of aBlockClosure on my value and the values of my children."
 
 	^ self subclassResponsibility
+	"d"
 ]
 
 { #category : 'accessing' }
