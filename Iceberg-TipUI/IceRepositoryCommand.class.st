@@ -27,6 +27,7 @@ IceRepositoryCommand >> beSuccess [
 
 { #category : 'execute' }
 IceRepositoryCommand >> execute [ 
+
 	self subclassResponsibility
 ]
 
