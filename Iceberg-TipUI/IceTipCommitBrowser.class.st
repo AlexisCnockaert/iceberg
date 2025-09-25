@@ -110,13 +110,13 @@ IceTipCommitBrowser >> doCommit [
 	message := commentPanel message.
 	isPushing := commentPanel isPushing.
 	isSaving := commentPanel isSaving.
-
+	commentPanel commitButton enabled: false.
 	commitBlock := [
-		self
-			doCommit: selectedItems
-		 	message: message
-		  	pushing: isPushing
-		   	saving: isSaving ].
+		               self
+			               doCommit: selectedItems
+			               message: message
+			               pushing: isPushing
+			               saving: isSaving ].
 
 	(IceTipCritiquesBeforeCommitBrowser
 		 onApplication: self application
@@ -138,7 +138,8 @@ IceTipCommitBrowser >> doCommit: aCollection message: aString pushing: pushingBo
 				(IceTipPushAction new repository: self repository) executeWithContext: self ].
 			savingBoolean ifTrue: [ 
 				saveAction execute ] ];
-		executeWithContext: self
+		executeWithContext: self.
+			commentPanel commitButton enabled: true.
 ]
 
 { #category : 'actions' }
