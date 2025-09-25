@@ -146,7 +146,7 @@ IceTipGitProviderRepositoryPanel >> selectedProtocol [
 { #category : 'accessing' }
 IceTipGitProviderRepositoryPanel >> userName [
 
-	^ self userNameInputText text asString trimmed
+	^ self userNameInputText text asString trimBoth
 ]
 
 { #category : 'accessing - ui' }
